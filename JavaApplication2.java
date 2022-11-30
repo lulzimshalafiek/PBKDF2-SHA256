@@ -38,6 +38,16 @@ public class JavaApplication2 {
 
         return f.generateSecret(spec).getEncoded();
     }
+
+     public static byte[] generateSalt() throws NoSuchAlgorithmException {
+      
+        SecureRandom random = SecureRandom.getInstance("SHA1PRNG");
+
+        byte[] salt = new byte[8];
+        random.nextBytes(salt);
+
+        return salt;
+    }
     
 
 }
