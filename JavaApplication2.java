@@ -7,10 +7,7 @@ import java.util.Arrays;
 import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.PBEKeySpec;
 
-/**
- *
- * @author nos
- */
+
 public class JavaApplication2 {
     /**
      * @param args the command line arguments
