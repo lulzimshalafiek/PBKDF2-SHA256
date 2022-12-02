@@ -17,12 +17,7 @@ public class JavaApplication2 {
 
     public static boolean authenticate(String attemptedPassword, byte[] encryptedPassword, byte[] salt)
             throws NoSuchAlgorithmException, InvalidKeySpecException {
-        // Encrypt the clear-text password using the same salt that was used to
-        // encrypt the original password
         byte[] encryptedAttemptedPassword = getEncryptedPassword(attemptedPassword, salt);
-
-        // Authentication succeeds if encrypted password that the user entered
-        // is equal to the stored hash
         return Arrays.equals(encryptedPassword, encryptedAttemptedPassword);
     }
 
