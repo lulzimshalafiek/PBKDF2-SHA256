@@ -11,8 +11,9 @@ import javax.crypto.spec.PBEKeySpec;
 public class JavaApplication2 {
   
     public static void main(String[] args) throws Exception {
-      
-
+        byte[] hash = getEncryptedPassword("password", "salt".getBytes());
+        System.out.println(Arrays.toString(hash));
+        System.out.println(bytesToHex(hash));
     }
 
     public static boolean authenticate(String attemptedPassword, byte[] encryptedPassword, byte[] salt)
